@@ -2,7 +2,7 @@
 
 A modern, responsive, and customizable developer portfolio built with React, Vite, and Framer Motion. Features a beautiful UI with theme switching capabilities, smooth animations, and a contact form integration.
 
-![Portfolio Preview](src/assets/project-1.png)
+![Portfolio Preview](src/assets/portfolio.png)
 
 ## ✨ Features
 
