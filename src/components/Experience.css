@@ -1,3 +1,24 @@
+/* Root Variables - Light Theme */
+:root {
+  --first-color: #3498db;
+  --first-color-lighter: #a5d8ff;
+  --first-color-rgb: 52, 152, 219;
+  --container-color: #ffffff;
+  --title-color: #2c3e50;
+  --text-color: #7f8c8d;
+  --text-color-light: #bdc3c7;
+}
+
+/* Dark Theme Overrides */
+[data-theme='dark'] {
+  --first-color: #2980b9;
+  --first-color-lighter: #3498db;
+  --container-color: #2c3e50;
+  --title-color: #ecf0f1;
+  --text-color: #bdc3c7;
+  --text-color-light: #7f8c8d;
+}
+
 /* Experience Section - Base container */
 .experience-section {
   position: relative;
@@ -52,6 +73,7 @@
   border-radius: 0.75rem;
   margin-left: 1rem;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  overflow-wrap: break-word;
 }
 
 /* Job title styling */
@@ -67,6 +89,7 @@
   font-weight: 500;
   color: var(--first-color);
   margin-bottom: 0.25rem;
+  font-size: 1rem;
 }
 
 /* Duration text */
@@ -102,36 +125,45 @@
   content: '';
   position: absolute;
   left: -1.2rem;
-  top: 0.5rem;
+  top: 0.6rem;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: var(--first-color-lighter);
 }
 
-/* ===== Responsive Breakpoints ===== */
+/* ================= Responsive Breakpoints ================= */
 
 /* Tablet view */
 @media screen and (max-width: 768px) {
   .timeline {
     padding-left: 2.5rem;
   }
+
   .timeline::before {
     left: 12px;
   }
+
   .timeline-icon {
     left: -2.5rem;
     width: 2rem;
     height: 2rem;
     font-size: 1rem;
   }
+
   .experience-content {
     padding: 1.25rem;
     margin-left: 0.5rem;
   }
+
   .job-title {
     font-size: 1.1rem;
   }
+
+  .company {
+    font-size: 0.95rem;
+  }
+
   .responsibilities li {
     font-size: 0.9rem;
     line-height: 1.5;
@@ -143,53 +175,40 @@
   .experience-section {
     padding: 0.5rem 0;
   }
+
   .timeline {
     padding-left: 2rem;
   }
+
   .timeline::before {
     left: 10px;
   }
+
   .timeline-icon {
     left: -2rem;
     width: 1.8rem;
     height: 1.8rem;
     font-size: 0.95rem;
   }
+
   .experience-content {
     padding: 1rem;
     margin-left: 0.5rem;
   }
+
   .job-title {
     font-size: 1rem;
   }
+
   .company {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
+
   .duration {
     font-size: 0.85rem;
   }
+
   .responsibilities li {
     font-size: 0.85rem;
   }
-}
-
-/* Root Variables - Light Theme */
-:root {
-  --first-color: #3498db;
-  --first-color-lighter: #a5d8ff;
-  --first-color-rgb: 52, 152, 219;
-  --container-color: #ffffff;
-  --title-color: #2c3e50;
-  --text-color: #7f8c8d;
-  --text-color-light: #bdc3c7;
-}
-
-/* Dark Theme Overrides */
-[data-theme='dark'] {
-  --first-color: #2980b9;
-  --first-color-lighter: #3498db;
-  --container-color: #2c3e50;
-  --title-color: #ecf0f1;
-  --text-color: #bdc3c7;
-  --text-color-light: #7f8c8d;
 }

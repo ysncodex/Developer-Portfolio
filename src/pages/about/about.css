@@ -1,3 +1,16 @@
+/* Global Reset & Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 /* Root Variables - Color scheme for consistent theming */
 :root {
   --first-color: #007bff;
@@ -12,6 +25,7 @@
   display: flex;
   min-height: 100vh;
   padding: 2rem;
+  flex-wrap: wrap;
 }
 
 /* Container Grid - 2-column layout for desktop */
@@ -37,8 +51,9 @@
 
 /* Circular profile image container */
 .about__img-wrapper {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 1.5rem;
@@ -162,6 +177,7 @@
 .about__text {
   line-height: 1.7;
   color: var(--text-color);
+  text-align: justify;
 }
 
 /* Social links container */
@@ -215,100 +231,126 @@
   padding: 2rem;
 }
 
-/* Tablet Responsive - Single column layout */
+/* Tablet Responsive */
 @media screen and (max-width: 968px) {
   .about__container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
   .about__left,
   .about__right {
     padding: 1rem;
+    align-items: center;
   }
+
   .about__img-wrapper {
-    width: 250px;
-    height: 250px;
+    max-width: 250px;
   }
+
   .experience-skills-container {
     grid-template-columns: 1fr;
   }
+
   .experience-wrapper,
   .skills-wrapper {
     padding: 1.5rem;
   }
+
+  .about__subtitle {
+    text-align: center;
+  }
 }
 
-/* Medium Devices - Adjusted info grid */
+/* Medium Devices */
 @media screen and (max-width: 768px) {
   .about__info {
-    gap: 0.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
-  .info__item {
-    padding: 0.6rem;
-  }
+
   .about__description {
     grid-column: 1;
   }
+
+  .about__name {
+    font-size: 1.75rem;
+  }
 }
 
-/* Small Devices - Compact layout */
+/* Small Devices */
 @media screen and (max-width: 576px) {
   .about {
     padding: 1rem;
   }
+
   .about__container {
     padding: 0.5rem;
   }
+
   .about__img-wrapper {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
   }
+
   .about__cv-btn {
     font-size: 0.95rem;
     padding: 0.6rem 1.2rem;
   }
+
   .social__link {
     width: 36px;
     height: 36px;
     font-size: 1.3rem;
   }
+
+  .about__text {
+    font-size: 0.95rem;
+  }
+
+  .experience-wrapper,
+  .skills-wrapper {
+    padding: 1rem;
+  }
 }
 
-/* Extra Small Devices - Stacked layout */
+/* Extra Small Devices */
 @media screen and (max-width: 400px) {
   .about__img-wrapper {
-    width: 160px;
-    height: 160px;
+    max-width: 160px;
   }
+
   .about__name {
     font-size: 1.5rem;
     text-align: center;
   }
+
   .about__cv-btn {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
+
   .about__info {
-    grid-template-columns: 1fr;
     padding: 0 0.25rem;
   }
+
   .info__item {
+    flex-direction: column;
+    align-items: flex-start;
     padding: 1.25rem;
     gap: 1rem;
   }
+
   .info__icon {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
   }
+
   .about__subtitle {
     font-size: 1.25rem;
   }
+
   .about__text {
-    font-size: 0.95rem;
-  }
-  .experience-wrapper,
-  .skills-wrapper {
-    padding: 1rem;
+    font-size: 0.9rem;
   }
 }
