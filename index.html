@@ -1,12 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yeasin---Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Yeasin - Full Stack Developer Portfolio. Experienced in React, Node.js, and modern web technologies." />
+  <meta name="keywords"
+    content="Yeasin, Web Developer, Full Stack Developer, React Developer, Portfolio, Frontend Developer" />
+  <meta name="author" content="Yeasin" />
+  <meta property="og:title" content="Yeasin - Full Stack Developer Portfolio" />
+  <meta property="og:description"
+    content="Portfolio showcasing my work as a Full Stack Developer specializing in React and modern web technologies." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#2196f3" />
+
+  <link rel="icon" type="image/png" href="./src/assets/home2.png" />
+  <link rel="apple-touch-icon" href="./src/assets/home2.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <title>Yeasin | Full Stack Developer Portfolio</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  </script>
+</body>
+
 </html>

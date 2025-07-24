@@ -1,0 +1,73 @@
+/* Theme Toggle Button - Fixed position */
+.theme-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--container-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect - rotation and color change */
+.theme-toggle:hover {
+  transform: rotate(45deg);
+  background-color: var(--first-color);
+}
+
+/* Icon color change on hover */
+.theme-toggle:hover .theme-icon {
+  color: var(--text-white);
+}
+
+/* Theme icon styling */
+.theme-icon {
+  font-size: 1.25rem;
+  color: var(--first-color);
+  transition: all 0.3s ease;
+}
+
+/* Dark mode icon color */
+.theme-toggle.dark .theme-icon {
+  color: var(--title-color);
+}
+
+/* ========== Responsive Styles ========== */
+
+/* Tablet & Mobile View */
+@media screen and (max-width: 768px) {
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .theme-icon {
+    font-size: 1rem;
+  }
+}
+
+/* Root Variables - Light Theme */
+:root {
+  --container-color: #ffffff;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --first-color: #3498db;
+  --text-white: #ffffff;
+  --title-color: #2c3e50;
+}
+
+/* Dark Theme Overrides */
+[data-theme='dark'] {
+  --container-color: #1e1e1e;
+  --border-color: #2d2d2d;
+  --first-color: #2980b9;
+  --title-color: #ecf0f1;
+}

@@ -1,10 +1,7 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-
 import Navbar from './components/Navbar';
-import Themes from './components/Themes';
-
+import ThemeSwitcher from './components/ThemeSwitcher';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
@@ -14,13 +11,13 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Themes />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="portfolio" element={<Portfolio />} />
-      </Routes>
+      <ThemeSwitcher />
+      <main className='main'>
+        <Home id="home" />
+        <About id="about" />
+        <Portfolio id="portfolio" />
+        <Contact id="contact" />
+      </main>
     </BrowserRouter>
   );
 }

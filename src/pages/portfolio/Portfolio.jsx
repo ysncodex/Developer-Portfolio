@@ -5,13 +5,13 @@ import './portfolio.css';
 
 const Portfolio = () => {
   return (
-    <section className="portfolio section">
+    <section className="portfolio section" id="portfolio">
       <h2 className="section__title">
-        My <span>Projects</span>
+        Featured <span>Projects</span>
       </h2>
-      <div className="portfolio__container container grid">
-        {portfolio.map((item) => {
-          return <PortfolioItem key={item.id} {...item} />;
+      <div className="portfolio__container container">
+        {portfolio.map((item, index) => {
+          return <PortfolioItem key={item.id} {...item} index={index} />;
         })}
       </div>
     </section>
