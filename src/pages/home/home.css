@@ -63,24 +63,11 @@
   gap: 0.3rem;
 }
 
-/* Highlighted role text - gradient effect for "Frontend-Focused" */
+/* Highlighted role text - solid color for visibility */
 .role-highlight {
   color: var(--first-color);
-  background: linear-gradient(135deg, var(--first-color), var(--first-color-alt));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   font-weight: 700;
-  position: relative;
   display: inline-block;
-}
-
-/* Fallback for browsers that don't support background-clip */
-@supports not (background-clip: text) {
-  .role-highlight {
-    color: var(--first-color);
-    -webkit-text-fill-color: var(--first-color);
-  }
 }
 
 /* Role text - standard styling */
