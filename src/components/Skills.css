@@ -1,0 +1,135 @@
+/* Skills Section - Base container */
+.skills-section {
+  padding: 2rem 0;
+}
+
+/* Grid container for skill categories */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual skill category */
+.skill-category {
+  padding: 1rem 0;
+}
+
+/* Category title with underline */
+.category-title {
+  color: var(--title-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+/* Title underline decoration */
+.category-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2rem;
+  height: 2px;
+  background: var(--first-color);
+}
+
+/* Grid for skill items */
+.skill-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Individual skill item */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  flex-wrap: nowrap;
+}
+
+/* Skill item hover effect */
+.skill-item:hover {
+  transform: translateY(-2px);
+  background: var(--first-color-lightest);
+}
+
+/* Skill icon styling */
+.skill-icon {
+  color: var(--first-color);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Skill name text */
+.skill-name {
+  color: var(--title-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ========== Responsive Styles ========== */
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-items {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-icon {
+    font-size: 1.3rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .skill-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .skill-item {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .skill-icon {
+    font-size: 1.2rem;
+  }
+
+  .skill-name {
+    font-size: 0.85rem;
+  }
+}
+
+/* Root Variables - Light Theme */
+:root {
+  --first-color: #3498db;
+  --first-color-lightest: #e1f0fa;
+  --title-color: #2c3e50;
+}
+
+/* Dark Theme Overrides */
+[data-theme='dark'] {
+  --first-color: #2980b9;
+  --first-color-lightest: #1a2a3a;
+  --title-color: #ecf0f1;
+}

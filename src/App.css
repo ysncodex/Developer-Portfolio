@@ -1,22 +1,68 @@
-/*=============== GOOGLE FONTS ===============*/
+/* =============== GOOGLE FONTS IMPORT =============== */
+/* Importing Open Sans and Poppins fonts from Google Fonts with specific weights */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,600&family=Poppins:500,600,700,800&display=swap');
 
-/*============= CSS VARIABLES ===============*/
+/* =============== ACCESSIBILITY UTILITIES =============== */
+/* Skip to content link for keyboard navigation */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--first-color);
+  color: var(--text-white);
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  z-index: 10000;
+  font-weight: 600;
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+  outline: 3px solid var(--title-color);
+  outline-offset: 2px;
+}
+
+/* Visually hidden utility class for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* =============== CSS VARIABLES DEFINITION =============== */
+/* Root variables for consistent theming across the application */
 :root {
-  /*========== Colors ==========*/
-  /* Color mode HSL(hue, saturation, lightness) */
-  --first-color: hsl(271, 76%, 53%);
-  --title-color: hsl(0, 0%, 40%);
-  --text-color: hsl(0, 0%, 50%);
-  --body-color: hsl(0, 0%, 100%);
-  --container-color: hsl(0, 0%, 93%);
-  --border-color: hsl(0, 0%, 87%);
-  --text-white: #fff;
+  /* ========== Color Variables ========== */
+  /* Light theme color variables */
+  --first-color: hsl(271, 76%, 53%);        /* Primary brand color */
+  --title-color: hsl(0, 0%, 40%);           /* Color for headings */
+  --text-color: hsl(0, 0%, 50%);            /* Default text color */
+  --body-color: hsl(0, 0%, 100%);           /* Main background color */
+  --container-color: hsl(0, 0%, 93%);       /* Container/component background */
+  --border-color: hsl(0, 0%, 87%);          /* Border color */
+  --text-white: #fff;                       /* Pure white text */
 
-  /*========== Font and Typography ==========*/
-  --body-font: 'Open Sans', sans-serif;
-  --second-font: 'Poppins', sans-serif;
+  /* Dark theme color variables */
+  --first-color-dark: hsl(271, 76%, 53%);   /* Primary color for dark mode */
+  --title-color-dark: hsl(0, 0%, 100%);     /* Headings in dark mode */
+  --text-color-dark: hsl(0, 0%, 80%);       /* Text color in dark mode */
+  --body-color-dark: hsl(0, 0%, 7%);        /* Dark mode background */
+  --container-color-dark: hsl(0, 1%, 17%);  /* Dark mode container */
+  --border-color-dark: hsl(0, 0%, 15%);     /* Dark mode borders */
 
+  /* ========== Font and Typography Variables ========== */
+  --body-font: 'Open Sans', sans-serif;     /* Default body font */
+  --second-font: 'Poppins', sans-serif;     /* Secondary font for headings */
+
+  /* Font size variables for responsive typography */
   --big-font-size: 56px;
   --h1-font-size: 50px;
   --h2-font-size: 32px;
@@ -27,7 +73,7 @@
   --smaller-font-size: 14px;
   --tiny-font-size: 12px;
 
-  /*========== Font Weight ==========*/
+  /* ========== Font Weight Variables ========== */
   --weight-400: 400;
   --weight-500: 500;
   --weight-600: 600;
@@ -35,16 +81,19 @@
   --weight-800: 800;
 }
 
-.dark-theme {
-  --title-color: hsl(0, 0%, 100%);
-  --text-color: hsl(0, 0%, 80%);
-  --body-color: hsl(0, 0%, 7%);
-  --container-color: hsl(0, 1%, 17%);
-  --border-color: hsl(0, 0%, 15%);
+/* =============== DARK THEME TOGGLE =============== */
+/* Applies dark theme variables when data-theme='dark' attribute is set */
+[data-theme='dark'] {
+  --first-color: var(--first-color-dark);
+  --title-color: var(--title-color-dark);
+  --text-color: var(--text-color-dark);
+  --body-color: var(--body-color-dark);
+  --container-color: var(--container-color-dark);
+  --border-color: var(--border-color-dark);
 }
 
-/*==== Responsive Typography ======= ==*/
-
+/* =============== RESPONSIVE TYPOGRAPHY =============== */
+/* Adjusts font sizes for smaller screens */
 @media (max-width: 1200px) {
   :root {
     --big-font-size: 36px;
@@ -59,13 +108,15 @@
   }
 }
 
-/*==== BASE ======= ==*/
+/* =============== BASE STYLES =============== */
+/* Reset and base styles for consistent rendering across browsers */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body and text element styles */
 body,
 input,
 textarea {
@@ -73,10 +124,13 @@ textarea {
   font-size: var(--normal-font-size);
   font-weight: var(--weight-500);
 }
+
 body {
   background-color: var(--body-color);
   color: var(--text-color);
 }
+
+/* Heading styles */
 h1,
 h2,
 h3,
@@ -85,6 +139,8 @@ h4 {
   font-family: var(--second-font);
   font-weight: var(--weight-700);
 }
+
+/* List and link styles */
 ul {
   list-style: none;
 }
@@ -92,6 +148,7 @@ a {
   text-decoration: none;
 }
 
+/* Form element styles */
 button,
 input,
 textarea {
@@ -99,25 +156,32 @@ textarea {
   border: none;
   outline: none;
 }
+
+/* Image responsiveness */
 img {
   max-width: 100%;
 }
 
-/*=============== REUSABLE CSS ===============*/
+/* =============== REUSABLE COMPONENT STYLES =============== */
+/* Container for centered content with max-width */
 .container {
   max-width: 1140px;
   margin-inline: auto;
   padding-inline: 15px;
 }
 
+/* Grid layout utility */
 .gird {
   display: grid;
   gap: 30px;
 }
+
+/* Section spacing */
 .section {
   padding-block: 70px;
 }
 
+/* Section title styling */
 .section__title {
   font-size: var(--big-font-size);
   font-weight: var(--weight-800);
@@ -129,6 +193,7 @@ img {
   color: var(--first-color);
 }
 
+/* Button component styling */
 .button {
   display: inline-block;
   color: var(--title-color);
@@ -143,10 +208,12 @@ img {
   transition: all 0.25s ease-in-out;
 }
 
+/* Button hover state */
 .button__hover {
   color: var(--text-white);
 }
 
+/* Button animation effect */
 .button::before {
   content: '';
   position: absolute;
@@ -161,6 +228,7 @@ img {
   transform: translateX(0);
 }
 
+/* Button icon styling */
 .button__icon {
   background-color: var(--first-color);
   position: absolute;
@@ -171,4 +239,227 @@ img {
   color: var(--text-white);
   text-align: center;
   line-height: 60px;
+}
+
+/* =============== CONTACT SECTION SPECIFIC STYLES =============== */
+/* Main contact section layout */
+.contact.section {
+  min-height: 100vh;
+  padding: 6rem 1.5rem;
+  background: var(--body-color);
+  position: relative;
+}
+
+/* Section header styles */
+.section__header-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--title-color);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Section title underline effect */
+.section__title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  width: 60%;
+  height: 3px;
+  margin: 0 auto;
+  background: var(--first-color);
+  border-radius: 2px;
+}
+
+.section__subtitle {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+/* Contact information grid layout */
+.contact__info {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Individual contact info item styling */
+.info__item {
+  background: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+/* Dark mode adjustments for info items */
+[data-theme='dark'] .info__item {
+  background: var(--container-color-dark);
+  border-color: var(--border-color-dark);
+}
+
+/* Icon wrapper styling */
+.info__icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background: rgba(var(--first-color-rgb), 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Dark mode icon wrapper */
+[data-theme='dark'] .info__icon-wrapper {
+  background: rgba(var(--first-color-rgb), 0.2);
+}
+
+.info__icon {
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+/* Contact info content layout */
+.info__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info__title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.info__desc {
+  color: var(--title-color);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode text adjustments */
+[data-theme='dark'] .info__title {
+  color: var(--text-color-dark);
+}
+
+[data-theme='dark'] .info__desc {
+  color: var(--title-color-dark);
+}
+
+/* Contact form container layout */
+.contact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  padding: 0 1rem;
+}
+
+/* Form card styling */
+.form__card {
+  background: var(--container-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+}
+
+/* Dark mode form card */
+[data-theme='dark'] .form__card {
+  background: var(--container-color-dark);
+  border-color: var(--border-color-dark);
+}
+
+/* Form control elements styling */
+.form__control {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: var(--body-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode form controls */
+[data-theme='dark'] .form__control {
+  background: var(--body-color-dark);
+  border-color: var(--border-color-dark);
+  color: var(--text-color-dark);
+}
+
+[data-theme='dark'] .form__control::placeholder {
+  color: var(--text-color-dark);
+  opacity: 0.7;
+}
+
+/* Additional color variables in RGB format */
+:root {
+  --first-color-rgb: 87, 142, 224; /* RGB values for primary color */
+  
+  /* Light theme color redefinitions */
+  --body-color: #ffffff;
+  --container-color: #f8f9fa;
+  --text-color: #555555;
+  --title-color: #2b2b2b;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --first-color: rgb(var(--first-color-rgb));
+  
+  /* Dark theme color redefinitions */
+  --body-color-dark: #121212;
+  --container-color-dark: #1e1e1e;
+  --text-color-dark: #b3b3b3;
+  --title-color-dark: #ffffff;
+  --border-color-dark: #2d2d2d;
+}
+
+/* =============== RESPONSIVE ADJUSTMENTS =============== */
+/* Tablet and smaller desktop adjustments */
+@media screen and (max-width: 968px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .section__title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile device adjustments */
+@media screen and (max-width: 576px) {
+  .section__title {
+    font-size: 2rem;
+  }
+
+  .info__item {
+    padding: 1.25rem;
+  }
+
+  .form__card {
+    padding: 1.5rem;
+  }
 }

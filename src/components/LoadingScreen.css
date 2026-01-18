@@ -1,0 +1,122 @@
+/* Loading Screen Overlay */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+}
+
+/* Loading Content Container */
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Logo Container */
+.logo-container {
+  position: relative;
+}
+
+/* Logo Circle */
+.logo-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--first-color), var(--first-color-alt));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 20px var(--first-color);
+}
+
+/* Logo Text */
+.logo-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--bg-color);
+  font-family: var(--second-font);
+  user-select: none;
+}
+
+/* Progress Container */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 200px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress Fill */
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--first-color), var(--first-color-alt));
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--first-color);
+  transition: width 0.2s ease-out;
+}
+
+/* Progress Text */
+.progress-text {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  font-weight: 600;
+  font-family: var(--second-font);
+  letter-spacing: 0.5px;
+}
+
+/* Responsive: Tablet */
+@media screen and (max-width: 768px) {
+  .logo-circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .logo-text {
+    font-size: 2.5rem;
+  }
+  
+  .progress-container {
+    width: 180px;
+  }
+}
+
+/* Responsive: Mobile */
+@media screen and (max-width: 480px) {
+  .logo-circle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .logo-text {
+    font-size: 2rem;
+  }
+  
+  .progress-container {
+    width: 160px;
+  }
+  
+  .progress-text {
+    font-size: 0.75rem;
+  }
+}

@@ -3,10 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yeasin---Portfolio</title>
+    <meta
+      name="description"
+      content="Yeasin - Frontend-Focused Full-Stack Engineer. Specializing in React.js, modern JavaScript, and building responsive, high-performance web applications."
+    />
+    <meta
+      name="keywords"
+      content="Yeasin, Frontend Developer, React Developer, Full Stack Engineer, JavaScript, TypeScript, Redux, Tailwind CSS, Portfolio"
+    />
+    <meta name="author" content="Md Yeasin" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yeasin.dev/" />
+    <meta
+      property="og:title"
+      content="Md Yeasin - Frontend Engineer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Frontend-focused Full-Stack Engineer specializing in React.js and modern web development. Building scalable, responsive applications with 40% performance improvements."
+    />
+    <meta property="og:image" content="https://yeasin.dev/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Md Yeasin - Frontend Engineer Portfolio"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Md Yeasin Portfolio" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://yeasin.dev/" />
+    <meta
+      name="twitter:title"
+      content="Md Yeasin - Frontend Engineer Portfolio"
+    />
+    <meta
+      name="twitter:description"
+      content="Frontend-focused Full-Stack Engineer specializing in React.js and modern web development. Building scalable, responsive applications."
+    />
+    <meta name="twitter:image" content="https://yeasin.dev/og-image.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Md Yeasin - Frontend Engineer Portfolio"
+    />
+    <meta name="twitter:creator" content="@ysncodex" />
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://yeasin.dev/" />
+
+    <meta name="theme-color" content="#2196f3" />
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" href="/vite.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>Md Yeasin | Full-Stack Engineer Portfolio</title>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Md Yeasin",
+        "alternateName": "Yeasin",
+        "url": "https://yeasin.dev",
+        "image": "https://yeasin.dev/og-image.png",
+        "sameAs": [
+          "https://github.com/ysncodex",
+          "https://www.linkedin.com/in/yeasin7/",
+          "https://www.facebook.com/profile.php?id=100010641914202"
+        ],
+        "jobTitle": "Executive, Software Development",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Cultive8 Technologies"
+        },
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "Computer Science"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dhaka",
+          "addressRegion": "Rampura",
+          "postalCode": "1217",
+          "addressCountry": "BD"
+        },
+        "email": "yeasin7y@gmail.com",
+        "telephone": "+8801624269321",
+        "knowsAbout": [
+          "React.js",
+          "JavaScript",
+          "TypeScript",
+          "Node.js",
+          ".NET Core",
+          "Redux",
+          "Tailwind CSS",
+          "Frontend Development",
+          "Full-Stack Development",
+          "Web Development"
+        ],
+        "description": "Frontend-focused Full-Stack Engineer specializing in React.js and modern web development. Building scalable, responsive applications with proven track record of 40% API latency reduction and 45+ production issues resolved."
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      const theme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    </script>
   </body>
 </html>

@@ -1,49 +1,69 @@
-import { useState } from "react";
-import Close from "../assets/close.svg";
+import React from 'react';
+import { HiArrowRight } from 'react-icons/hi';
+import './portfolioItem.css';
 
-const PortfolioItem = ({ img, title, details }) => {
-  const [modal, setModal] = useState(false);
-  const toggleModal = () => {
-    setModal(!modal);
-  };
+const PortfolioItem = ({ img, title, date, description, technologies, tags, demo, index }) => {
+  const isEven = index % 2 === 1;
+
   return (
-    <div className="portfolio__item">
-      <img src={img} alt="" className="portfolio__img" />
-      <div className="portfolio__hover" onClick={toggleModal}>
-        <h3 className="portfolio__title">{title}</h3>
+    <div className={`portfolio-card ${isEven ? 'portfolio-card--reverse' : ''}`}>
+      <div className="portfolio-card__row">
+        {!isEven ? (
+          <>
+            <div className="portfolio-card__image-container">
+              <img src={img} alt={title} className="portfolio-card__image" />
+            </div>
+            <div className="portfolio-card__content">
+              <div className="portfolio-card__header">
+                <h3 className="portfolio-card__title">{title}</h3>
+                <div className="portfolio-card__tags">
+                  {tags.map((tag, index) => (
+                    <span key={index} className="portfolio-card__tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <p className="portfolio-card__date">{date}</p>
+              <p className="portfolio-card__description">{description}</p>
+              <div className="portfolio-card__technologies">
+                <p className="portfolio-card__tech-title">Technologies:</p>
+                <p className="portfolio-card__tech-list">{technologies.join(', ')}</p>
+              </div>
+              <a href={demo} className="portfolio-card__button" target="_blank" rel="noopener noreferrer">
+                See more <HiArrowRight className="button-icon" />
+              </a>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="portfolio-card__content">
+              <div className="portfolio-card__header">
+                <h3 className="portfolio-card__title">{title}</h3>
+                <div className="portfolio-card__tags">
+                  {tags.map((tag, index) => (
+                    <span key={index} className="portfolio-card__tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <p className="portfolio-card__date">{date}</p>
+              <p className="portfolio-card__description">{description}</p>
+              <div className="portfolio-card__technologies">
+                <p className="portfolio-card__tech-title">Technologies:</p>
+                <p className="portfolio-card__tech-list">{technologies.join(', ')}</p>
+              </div>
+              <a href={demo} className="portfolio-card__button" target="_blank" rel="noopener noreferrer">
+                See more <HiArrowRight className="button-icon" />
+              </a>
+            </div>
+            <div className="portfolio-card__image-container">
+              <img src={img} alt={title} className="portfolio-card__image" />
+            </div>
+          </>
+        )}
       </div>
-
-      {modal && (
-        <div className="portfolio__modal">
-          <div className="portfolio__modal-content">
-            <img
-              src={Close}
-              alt=""
-              className="modal__close"
-              onClick={toggleModal}
-            />
-
-            <h3 className="modal__title">{title}</h3>
-
-            <ul className="modal__list grid">
-              {details.map(({ icon, title, desc }, index) => {
-                return (
-                  <li className="modal__item" key={index}>
-                    <span className="item__icon">{icon}</span>
-
-                    <div>
-                      <span className="item__title"> {title}</span>
-                      <span className="item__details">{desc}</span>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-
-            <img src={img} alt="" className="modal__img" />
-          </div>
-        </div>
-      )}
     </div>
   );
 };

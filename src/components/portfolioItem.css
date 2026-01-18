@@ -1,0 +1,203 @@
+/* Portfolio Card - Base styling */
+.portfolio-card {
+  background: var(--container-color);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  width: 100%;
+  border: 1px solid var(--border-color);
+}
+
+/* Card hover effects */
+.portfolio-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Card row layout */
+.portfolio-card__row {
+  display: flex;
+  flex-direction: row;
+  min-height: 400px;
+}
+
+/* Image container (left/right) */
+.portfolio-card__image-container {
+  position: relative;
+  width: 50%;
+  min-height: 100%;
+}
+
+/* Project image styling */
+.portfolio-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.25rem 0 0 1.25rem;
+}
+
+/* Card header section */
+.portfolio-card__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Tags container */
+.portfolio-card__tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Individual tag styling */
+.portfolio-card__tag {
+  background: var(--first-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--weight-500);
+}
+
+/* Content area (right/left) */
+.portfolio-card__content {
+  padding: 2.5rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Project title */
+.portfolio-card__title {
+  color: var(--title-color);
+  font-size: var(--h3-font-size);
+  font-weight: var(--weight-600);
+  margin: 0;
+}
+
+/* Project date */
+.portfolio-card__date {
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  margin-bottom: 1rem;
+  font-family: monospace;
+}
+
+/* Project description */
+.portfolio-card__description {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Technologies section */
+.portfolio-card__technologies {
+  margin-bottom: 1.5rem;
+}
+
+/* Technologies heading */
+.portfolio-card__tech-title {
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-600);
+  margin-bottom: 0.25rem;
+}
+
+/* Technologies list */
+.portfolio-card__tech-list {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+}
+
+/* CTA Button */
+.portfolio-card__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #007bff 0%, #6f42c1 100%);
+  color: white;
+  border-radius: 2rem;
+  font-weight: var(--weight-500);
+  font-size: var(--small-font-size);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  width: fit-content;
+}
+
+/* Button hover state */
+.portfolio-card__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(111, 66, 193, 0.3);
+}
+
+/* Button icon */
+.button-icon {
+  font-size: 1.1em;
+  transition: transform 0.3s ease;
+}
+
+/* Icon animation */
+.portfolio-card__button:hover .button-icon {
+  transform: translateX(4px);
+}
+
+/* Reversed card layout */
+.portfolio-card--reverse .portfolio-card__image-container {
+  border-radius: 0 1.25rem 1.25rem 0;
+}
+.portfolio-card--reverse .portfolio-card__image {
+  border-radius: 0 1.25rem 1.25rem 0;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] .portfolio-card {
+  background: var(--container-color-dark);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--border-color-dark);
+}
+[data-theme='dark'] .portfolio-card__tag {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color-dark);
+  backdrop-filter: blur(4px);
+}
+
+/* Tablet responsive - stack layout */
+@media screen and (max-width: 968px) {
+  .portfolio-card__row {
+    flex-direction: column;
+  }
+  .portfolio-card__image-container,
+  .portfolio-card--reverse .portfolio-card__image-container {
+    width: 100%;
+    border-radius: 1.25rem 1.25rem 0 0;
+  }
+  .portfolio-card__image,
+  .portfolio-card--reverse .portfolio-card__image {
+    border-radius: 1.25rem 1.25rem 0 0;
+  }
+  .portfolio-card__content {
+    width: 100%;
+    padding: 2rem;
+  }
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 576px) {
+  .portfolio-card__image-container {
+    height: 250px;
+  }
+  .portfolio-card__content {
+    padding: 1.5rem;
+  }
+  .portfolio-card__title {
+    font-size: calc(var(--h3-font-size) * 0.9);
+  }
+}

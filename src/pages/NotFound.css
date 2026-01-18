@@ -1,0 +1,130 @@
+/* 404 Not Found Section */
+.notfound-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background: var(--bg-color);
+}
+
+/* Container */
+.notfound-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Content Wrapper */
+.notfound-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Icon */
+.notfound-icon {
+  font-size: 5rem;
+  color: var(--first-color);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+/* Title (404) */
+.notfound-title {
+  font-size: 8rem;
+  font-weight: 800;
+  color: var(--title-color);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-family: var(--second-font);
+  background: linear-gradient(135deg, var(--first-color), var(--title-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtitle */
+.notfound-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--title-color);
+  margin-bottom: 1rem;
+  font-family: var(--second-font);
+}
+
+/* Description */
+.notfound-description {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Actions Container */
+.notfound-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Button Styles */
+.notfound-actions .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.notfound-actions .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive: Tablet */
+@media screen and (max-width: 768px) {
+  .notfound-icon {
+    font-size: 4rem;
+  }
+  
+  .notfound-title {
+    font-size: 6rem;
+  }
+  
+  .notfound-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .notfound-description {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive: Mobile */
+@media screen and (max-width: 480px) {
+  .notfound-section {
+    padding: 60px 15px;
+  }
+  
+  .notfound-icon {
+    font-size: 3rem;
+  }
+  
+  .notfound-title {
+    font-size: 4rem;
+  }
+  
+  .notfound-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .notfound-description {
+    font-size: 0.95rem;
+  }
+  
+  .notfound-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+}

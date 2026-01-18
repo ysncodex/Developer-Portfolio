@@ -1,0 +1,195 @@
+/* Experience Section - Base container */
+.experience-section {
+  position: relative;
+  padding: 1rem 0;
+}
+
+/* Timeline container - with vertical line */
+.timeline {
+  position: relative;
+  padding-left: 3.5rem;
+}
+
+/* Vertical timeline indicator */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: var(--first-color-lighter);
+}
+
+/* Individual experience item */
+.experience-item {
+  position: relative;
+  padding: 1.5rem 0;
+  margin-bottom: 2.5rem;
+}
+
+/* Timeline bullet point */
+.timeline-icon {
+  position: absolute;
+  left: -3.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: var(--first-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 10px rgba(var(--first-color-rgb), 0.2);
+  z-index: 2;
+}
+
+/* Experience content card */
+.experience-content {
+  background: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-left: 1rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Job title styling */
+.job-title {
+  color: var(--title-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Company name styling */
+.company {
+  font-weight: 500;
+  color: var(--first-color);
+  margin-bottom: 0.25rem;
+}
+
+/* Duration text */
+.duration {
+  color: var(--text-color-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+/* Responsibilities list */
+.responsibilities {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+/* Individual responsibility item */
+.responsibilities li {
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Remove margin from last item */
+.responsibilities li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsibility bullet point */
+.responsibilities li::before {
+  content: '';
+  position: absolute;
+  left: -1.2rem;
+  top: 0.5rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--first-color-lighter);
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablet view */
+@media screen and (max-width: 768px) {
+  .timeline {
+    padding-left: 2.5rem;
+  }
+  .timeline::before {
+    left: 12px;
+  }
+  .timeline-icon {
+    left: -2.5rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+  .experience-content {
+    padding: 1.25rem;
+    margin-left: 0.5rem;
+  }
+  .job-title {
+    font-size: 1.1rem;
+  }
+  .responsibilities li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 480px) {
+  .experience-section {
+    padding: 0.5rem 0;
+  }
+  .timeline {
+    padding-left: 2rem;
+  }
+  .timeline::before {
+    left: 10px;
+  }
+  .timeline-icon {
+    left: -2rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.95rem;
+  }
+  .experience-content {
+    padding: 1rem;
+    margin-left: 0.5rem;
+  }
+  .job-title {
+    font-size: 1rem;
+  }
+  .company {
+    font-size: 0.95rem;
+  }
+  .duration {
+    font-size: 0.85rem;
+  }
+  .responsibilities li {
+    font-size: 0.85rem;
+  }
+}
+
+/* Root Variables - Light Theme */
+:root {
+  --first-color: #3498db;
+  --first-color-lighter: #a5d8ff;
+  --first-color-rgb: 52, 152, 219;
+  --container-color: #ffffff;
+  --title-color: #2c3e50;
+  --text-color: #7f8c8d;
+  --text-color-light: #bdc3c7;
+}
+
+/* Dark Theme Overrides */
+[data-theme='dark'] {
+  --first-color: #2980b9;
+  --first-color-lighter: #3498db;
+  --container-color: #2c3e50;
+  --title-color: #ecf0f1;
+  --text-color: #bdc3c7;
+  --text-color-light: #7f8c8d;
+}
