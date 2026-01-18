@@ -51,10 +51,43 @@
   display: inline-block;
 }
 
-/* Role title styling - smaller than main title */
+/* Role title styling - enhanced with gradient and spacing */
 .title-role {
   font-size: 2rem;
   color: var(--title-color);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+/* Highlighted role text - gradient effect for "Frontend-Focused" */
+.role-highlight {
+  background: linear-gradient(135deg, var(--first-color), var(--first-color-alt));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  position: relative;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Role text - standard styling */
+.role-text {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+/* Shimmer animation for gradient text */
+@keyframes shimmer {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
 }
 
 /* Description text - readable paragraph with max width */

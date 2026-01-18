@@ -1,17 +1,18 @@
 # Frontend Engineer Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://yeasin.dev)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://yeasinportfolio.netlify.app/)
 [![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.2.0-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 A modern, production-ready developer portfolio built with React, Vite, and Framer Motion. Features enterprise-grade SEO, accessibility compliance (WCAG 2.1 AA), dual theme system, and professional animations.
 
-![Portfolio Preview](src/assets/project-1.png)
+![Portfolio Preview](src/assets/show.png)
+![Portfolio Preview](src/assets/show-1.png)
 
 ## 🌟 Live Demo
 
-**[View Live Portfolio →](https://yeasin.dev)**
+**[View Live Portfolio →](https://yeasinportfolio.netlify.app/)**
 
 ## ✨ Features
 

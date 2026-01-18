@@ -40,7 +40,10 @@ const Home = () => {
             <motion.h1 variants={fadeInUp} className="home__title">
               <span className="typing-text">Md. Yeasin</span>
               <div className="title-wrapper">
-                <div className="title-role">Frontend-Focused Full-Stack Engineer</div>
+                <div className="title-role">
+                  <span className="role-highlight">Frontend-Focused</span>
+                  <span className="role-text"> Full-Stack Engineer</span>
+                </div>
               </div>
             </motion.h1>
 
