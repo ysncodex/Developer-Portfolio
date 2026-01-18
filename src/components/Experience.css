@@ -111,65 +111,168 @@
 
 /* ===== Responsive Breakpoints ===== */
 
-/* Tablet view */
+/* Large Desktop */
+@media screen and (max-width: 1200px) {
+  .experience-content {
+    padding: 1.4rem;
+  }
+  
+  .job-title {
+    font-size: 1.15rem;
+  }
+}
+
+/* Tablet Landscape */
+@media screen and (max-width: 1024px) {
+  .timeline {
+    padding-left: 3rem;
+  }
+  
+  .timeline::before {
+    left: 14px;
+  }
+  
+  .timeline-icon {
+    left: -3rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* Tablet Portrait */
 @media screen and (max-width: 768px) {
   .timeline {
     padding-left: 2.5rem;
   }
+  
   .timeline::before {
     left: 12px;
   }
+  
   .timeline-icon {
     left: -2.5rem;
     width: 2rem;
     height: 2rem;
     font-size: 1rem;
   }
+  
   .experience-content {
     padding: 1.25rem;
     margin-left: 0.5rem;
   }
+  
   .job-title {
     font-size: 1.1rem;
   }
+  
+  .company {
+    font-size: 0.95rem;
+  }
+  
   .responsibilities li {
     font-size: 0.9rem;
     line-height: 1.5;
   }
 }
 
-/* Mobile view */
+/* Mobile Landscape */
+@media screen and (max-width: 640px) {
+  .experience-item {
+    margin-bottom: 2rem;
+  }
+  
+  .job-title {
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile Portrait */
 @media screen and (max-width: 480px) {
   .experience-section {
     padding: 0.5rem 0;
   }
+  
   .timeline {
     padding-left: 2rem;
   }
+  
   .timeline::before {
     left: 10px;
+    width: 1.5px;
   }
+  
   .timeline-icon {
     left: -2rem;
     width: 1.8rem;
     height: 1.8rem;
     font-size: 0.95rem;
   }
+  
   .experience-content {
     padding: 1rem;
     margin-left: 0.5rem;
   }
+  
   .job-title {
     font-size: 1rem;
   }
+  
   .company {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
+  
   .duration {
     font-size: 0.85rem;
+    margin-bottom: 0.8rem;
   }
+  
+  .responsibilities {
+    padding-left: 1rem;
+  }
+  
   .responsibilities li {
     font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media screen and (max-width: 360px) {
+  .timeline {
+    padding-left: 1.8rem;
+  }
+  
+  .timeline::before {
+    left: 9px;
+  }
+  
+  .timeline-icon {
+    left: -1.8rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .experience-content {
+    padding: 0.9rem;
+    margin-left: 0.4rem;
+  }
+  
+  .job-title {
+    font-size: 0.95rem;
+  }
+  
+  .company {
+    font-size: 0.85rem;
+  }
+  
+  .duration {
+    font-size: 0.8rem;
+  }
+  
+  .responsibilities li {
+    font-size: 0.8rem;
   }
 }
 

@@ -99,6 +99,81 @@ button:focus:not(:focus-visible) {
   }
 }
 
+/* Standard desktop (up to 1200px) */
+@media (max-width: 1200px) {
+  .container {
+    max-width: calc(100% - 120px);
+  }
+  
+  section {
+    padding: 5rem 0;
+  }
+}
+
+/* Tablet landscape (up to 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    max-width: calc(100% - 80px);
+  }
+  
+  section {
+    padding: 4.5rem 0;
+    min-height: auto;
+  }
+}
+
+/* Tablet portrait (up to 768px) */
+@media (max-width: 768px) {
+  .container {
+    max-width: calc(100% - 60px);
+  }
+  
+  section {
+    padding: 4rem 0;
+  }
+  
+  html {
+    scroll-padding-top: 60px;
+  }
+}
+
+/* Mobile landscape (up to 640px) */
+@media (max-width: 640px) {
+  .container {
+    max-width: calc(100% - 40px);
+  }
+  
+  section {
+    padding: 3.5rem 0;
+  }
+}
+
+/* Mobile portrait (up to 480px) */
+@media (max-width: 480px) {
+  .container {
+    max-width: calc(100% - 30px);
+  }
+  
+  section {
+    padding: 3rem 0;
+  }
+  
+  html {
+    scroll-padding-top: 50px;
+  }
+}
+
+/* Extra small mobile (up to 360px) */
+@media (max-width: 360px) {
+  .container {
+    max-width: calc(100% - 24px);
+  }
+  
+  section {
+    padding: 2.5rem 0;
+  }
+}
+
 /* Standard desktop screens (up to 1200px) */
 @media (max-width: 1200px) {
   /* Reduce grid gaps */

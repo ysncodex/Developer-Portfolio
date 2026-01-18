@@ -86,7 +86,14 @@
 
 /* ========== Responsive Styles ========== */
 
-/* Tablet View */
+/* Large Desktop */
+@media screen and (max-width: 1200px) {
+  .nav {
+    left: 1.5rem;
+  }
+}
+
+/* Tablet Landscape */
 @media screen and (max-width: 1024px) {
   .nav {
     left: 1rem;
@@ -109,8 +116,21 @@
   }
 }
 
-/* Mobile View - Converts to bottom bar */
-@media screen and (max-width: 600px) {
+/* Tablet Portrait */
+@media screen and (max-width: 768px) {
+  .nav {
+    left: 0.8rem;
+  }
+
+  .nav__link {
+    width: 42px;
+    height: 42px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 640px) {
   .nav {
     position: fixed;
     top: auto;
@@ -121,9 +141,9 @@
 
   .nav__menu {
     flex-direction: row;
-    padding: 0.5rem 0.75rem;
+    padding: 0.6rem 1rem;
     border-radius: 50px;
-    gap: 0.5rem;
+    gap: 0.6rem;
   }
 
   /* Hide tooltips on mobile */
@@ -132,9 +152,45 @@
   }
 
   .nav__link {
+    width: 42px;
+    height: 42px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile Portrait - Converts to bottom bar */
+@media screen and (max-width: 480px) {
+  .nav {
+    bottom: 0.8rem;
+  }
+
+  .nav__menu {
+    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .nav__link {
     width: 40px;
     height: 40px;
     font-size: 1rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media screen and (max-width: 360px) {
+  .nav {
+    bottom: 0.6rem;
+  }
+
+  .nav__menu {
+    padding: 0.45rem 0.6rem;
+    gap: 0.4rem;
+  }
+
+  .nav__link {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
   }
 }
 

@@ -94,17 +94,90 @@
 
 /* =============== RESPONSIVE TYPOGRAPHY =============== */
 /* Adjusts font sizes for smaller screens */
+
+/* Large Desktop */
+@media (max-width: 1440px) {
+  :root {
+    --big-font-size: 48px;
+    --h1-font-size: 42px;
+    --h2-font-size: 30px;
+    --h3-font-size: 22px;
+  }
+}
+
+/* Standard Desktop */
 @media (max-width: 1200px) {
   :root {
-    --big-font-size: 36px;
-    --h1-font-size: 32px;
-    --h2-font-size: 24px;
+    --big-font-size: 42px;
+    --h1-font-size: 38px;
+    --h2-font-size: 28px;
+    --h3-font-size: 21px;
+    --large-font-size: 17px;
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+  :root {
+    --big-font-size: 38px;
+    --h1-font-size: 34px;
+    --h2-font-size: 26px;
     --h3-font-size: 20px;
     --large-font-size: 16px;
     --normal-font-size: 15px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  :root {
+    --big-font-size: 34px;
+    --h1-font-size: 30px;
+    --h2-font-size: 24px;
+    --h3-font-size: 19px;
+    --large-font-size: 16px;
+    --normal-font-size: 15px;
     --small-font-size: 14px;
-    --smaller-font-size: 13px;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 640px) {
+  :root {
+    --big-font-size: 30px;
+    --h1-font-size: 28px;
+    --h2-font-size: 22px;
+    --h3-font-size: 18px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  :root {
+    --big-font-size: 28px;
+    --h1-font-size: 26px;
+    --h2-font-size: 20px;
+    --h3-font-size: 17px;
+    --large-font-size: 15px;
+    --normal-font-size: 14px;
+    --small-font-size: 13px;
+    --smaller-font-size: 12px;
     --tiny-font-size: 11px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  :root {
+    --big-font-size: 26px;
+    --h1-font-size: 24px;
+    --h2-font-size: 19px;
+    --h3-font-size: 16px;
+    --large-font-size: 14px;
+    --normal-font-size: 13px;
+    --small-font-size: 12px;
+    --smaller-font-size: 11px;
+    --tiny-font-size: 10px;
   }
 }
 
@@ -239,6 +312,47 @@ img {
   color: var(--text-white);
   text-align: center;
   line-height: 60px;
+}
+
+/* =============== RESPONSIVE UTILITIES =============== */
+/* Mobile-specific utilities */
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 20px;
+  }
+  
+  .section__title {
+    margin-bottom: 50px;
+  }
+  
+  .button {
+    padding: 12px 50px 12px 25px;
+    font-size: var(--smaller-font-size);
+  }
+  
+  .button__icon {
+    width: 45px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 15px;
+  }
+  
+  .section__title {
+    margin-bottom: 40px;
+  }
+  
+  .button {
+    padding: 10px 40px 10px 20px;
+  }
+  
+  .button__icon {
+    width: 40px;
+    line-height: 45px;
+  }
 }
 
 /* =============== CONTACT SECTION SPECIFIC STYLES =============== */

@@ -79,7 +79,27 @@
 
 /* ========== Responsive Styles ========== */
 
-/* Tablet View */
+/* Large Desktop */
+@media screen and (max-width: 1200px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+  }
+}
+
+/* Tablet Landscape */
+@media screen and (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .skill-items {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
+
+/* Tablet Portrait */
 @media (max-width: 768px) {
   .skills-container {
     grid-template-columns: 1fr;
@@ -97,10 +117,30 @@
   .skill-name {
     font-size: 0.9rem;
   }
+  
+  .category-title {
+    font-size: 1.05rem;
+  }
 }
 
-/* Mobile View */
+/* Mobile Landscape */
+@media (max-width: 640px) {
+  .skill-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+  }
+  
+  .skill-item {
+    padding: 0.65rem;
+  }
+}
+
+/* Mobile Portrait */
 @media (max-width: 480px) {
+  .skills-section {
+    padding: 1.5rem 0;
+  }
+  
   .skill-items {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
@@ -117,6 +157,31 @@
 
   .skill-name {
     font-size: 0.85rem;
+  }
+  
+  .category-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .skill-items {
+    gap: 0.6rem;
+  }
+  
+  .skill-item {
+    padding: 0.45rem;
+    gap: 0.4rem;
+  }
+  
+  .skill-icon {
+    font-size: 1.1rem;
+  }
+  
+  .skill-name {
+    font-size: 0.8rem;
   }
 }
 

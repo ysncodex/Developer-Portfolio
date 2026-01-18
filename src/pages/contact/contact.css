@@ -330,15 +330,39 @@
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1080px) {
+
+/* Large Desktop */
+@media screen and (max-width: 1440px) {
+  .contact__container {
+    max-width: 1100px;
+    gap: 3.5rem;
+  }
+}
+
+/* Standard Desktop */
+@media screen and (max-width: 1200px) {
   .contact__container {
     gap: 3rem;
+  }
+  .form__card {
+    padding: 2.2rem;
+  }
+  .section__title {
+    font-size: 2.3rem;
+  }
+}
+
+/* Tablet Landscape */
+@media screen and (max-width: 1080px) {
+  .contact__container {
+    gap: 2.5rem;
   }
   .form__card {
     padding: 2rem;
   }
 }
 
+/* Tablet Portrait - Stack Layout */
 @media screen and (max-width: 968px) {
   .contact__container {
     grid-template-columns: 1fr;
@@ -346,36 +370,197 @@
   }
   .contact__info {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
   .section__title {
     font-size: 2.2rem;
   }
+  .form__card {
+    padding: 2rem;
+  }
 }
 
+/* Tablet Small */
+@media screen and (max-width: 850px) {
+  .contact__info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Landscape */
 @media screen and (max-width: 768px) {
+  .contact.section {
+    padding: 5rem 1.2rem;
+  }
   .form__group {
     grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
   .contact__info {
     grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
-  .contact.section {
-    padding: 5rem 1.5rem;
+  .section__title {
+    font-size: 2rem;
+  }
+  .section__subtitle {
+    font-size: 1rem;
+  }
+  .info__item {
+    padding: 1.3rem;
+  }
+  .form__input-div {
+    margin-bottom: 1.2rem;
   }
 }
 
+/* Mobile Portrait */
 @media screen and (max-width: 576px) {
   .contact.section {
     padding: 4rem 1rem;
   }
+  .section__header-wrapper {
+    margin-bottom: 3rem;
+  }
   .section__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .section__subtitle {
+    font-size: 0.95rem;
   }
   .form__card {
     padding: 1.5rem;
   }
   .info__item {
-    padding: 1.25rem;
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+  .info__icon-wrapper {
+    width: 42px;
+    height: 42px;
+  }
+  .info__icon {
+    font-size: 1.1rem;
+  }
+  .info__title {
+    font-size: 0.85rem;
+  }
+  .info__desc {
+    font-size: 0.95rem;
+  }
+  .form__title {
+    font-size: 1.6rem;
+  }
+  .form__subtitle {
+    font-size: 0.9rem;
+  }
+  .form__control {
+    padding: 0.9rem 1.1rem;
+    font-size: 0.9rem;
+  }
+  .textarea {
+    min-height: 140px;
+  }
+  .form__button {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+  }
+  .contact__social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+  .contact.section {
+    padding: 3.5rem 0.8rem;
+  }
+  .section__title {
+    font-size: 1.6rem;
+  }
+  .form__card {
+    padding: 1.3rem;
+  }
+  .info__item {
+    padding: 1rem;
+    gap: 0.9rem;
+  }
+  .info__icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+  .info__icon {
+    font-size: 1rem;
+  }
+  .form__header {
+    margin-bottom: 1.5rem;
+  }
+  .form__title {
+    font-size: 1.4rem;
+  }
+  .form__control {
+    padding: 0.85rem 1rem;
+    font-size: 0.88rem;
+  }
+  .textarea {
+    min-height: 130px;
+  }
+}
+
+/* Extra Small Mobile */
+@media screen and (max-width: 360px) {
+  .contact.section {
+    padding: 3rem 0.6rem;
+  }
+  .section__title {
+    font-size: 1.5rem;
+  }
+  .section__subtitle {
+    font-size: 0.9rem;
+  }
+  .form__card {
+    padding: 1.1rem;
+  }
+  .info__item {
+    padding: 0.9rem;
+    gap: 0.8rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .info__icon-wrapper {
+    width: 38px;
+    height: 38px;
+  }
+  .info__title {
+    font-size: 0.8rem;
+  }
+  .info__desc {
+    font-size: 0.88rem;
+    word-break: break-word;
+  }
+  .form__title {
+    font-size: 1.3rem;
+  }
+  .form__subtitle {
+    font-size: 0.85rem;
+  }
+  .form__control {
+    padding: 0.8rem 0.95rem;
+    font-size: 0.85rem;
+  }
+  .textarea {
+    min-height: 120px;
+  }
+  .form__button {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  .contact__social-link {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
   }
 }
 
